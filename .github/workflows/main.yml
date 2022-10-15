@@ -21,9 +21,9 @@ jobs:
         pip install numpy matplotlib yfinance requests beautifulsoup4 twython numba
     - name: returntriangle
       env:
-        APP_KEY: ${{ secrets.APP_KEY }}
-        APP_SECRET: ${{ secrets.APP_SECRET }}
+        CONSUMER_KEY: ${{ secrets.CONSUMER_KEY }}
+        CONSUMER_SECRET: ${{ secrets.CONSUMER_SECRET }}
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+        ACCESS_TOKEN_SECRET: ${{ secrets.ACCESS_TOKEN_SECRET }}
       run: |
         python tweet.py

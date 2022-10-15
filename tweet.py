@@ -45,11 +45,11 @@ def triangle(dates, values):
 	return matrix
 
 
-APP_KEY = os.environ.get('consumer_key')
-APP_SECRET = os.environ.get('consumer_secret')
-ACCESS_TOKEN = os.environ.get('access_token')
-ACCESS_SECRET = os.environ.get('access_token_secret')
-twitter = Twython(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_SECRET)
+APP_KEY = os.environ.get('CONSUMER_KEY')
+APP_SECRET = os.environ.get('CONSUMER_SECRET')
+ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
+ACCESS_TOKEN_SECRET = os.environ.get('ACCESS_TOKEN_SECRET')
+twitter = Twython(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 print(twitter.verify_credentials())
 image = "triangle.png"
 #symbol = "^DJI"

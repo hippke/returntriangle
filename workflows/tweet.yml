@@ -1,6 +1,6 @@
-name: betel120dflux
+name: returntriangle
 
-#on: [push]
+on: [push]
 
 on:
   schedule:

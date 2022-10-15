@@ -102,7 +102,7 @@ cax = plt.imshow(
 cbar = fig.colorbar(cax)
 cbar.ax.set_title('CAGR (%)')
 plt.grid(linestyle='--', linewidth=0.5)
-plt.title("Return triangle:"\n" + short_name)
+plt.title("Return triangle:\n" + short_name)
 plt.xlabel("Sell")
 plt.ylabel("Buy")
 ax.ticklabel_format(useOffset=False)

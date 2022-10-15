@@ -1,0 +1,29 @@
+name: betel120dflux
+
+#on: [push]
+
+on:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.10
+    - name: Install dependencies
+      run: |
+        pip numpy matplotlib yfinance requests beautifulsoup4 twython numba
+    - name: returntriangle
+      env:
+        APP_KEY: ${{ secrets.APP_KEY }}
+        APP_SECRET: ${{ secrets.APP_SECRET }}
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_SECRET: ${{ secrets.ACCESS_SECRET }}
+      run: |
+        python tweet.py

@@ -18,7 +18,7 @@ jobs:
         python-version: 3.9
     - name: Install dependencies
       run: |
-        pip numpy matplotlib yfinance requests beautifulsoup4 twython numba
+        pip install numpy matplotlib yfinance requests beautifulsoup4 twython numba
     - name: returntriangle
       env:
         APP_KEY: ${{ secrets.APP_KEY }}

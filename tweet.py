@@ -50,7 +50,7 @@ APP_SECRET = os.environ.get('CONSUMER_SECRET')
 ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
 ACCESS_TOKEN_SECRET = os.environ.get('ACCESS_TOKEN_SECRET')
 twitter = Twython(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
-print(twitter.verify_credentials())
+#print(twitter.verify_credentials())
 image = "triangle.png"
 #symbol = "^DJI"
 symbol = trending_symbol()
@@ -102,7 +102,7 @@ cax = plt.imshow(
 cbar = fig.colorbar(cax)
 cbar.ax.set_title('CAGR (%)')
 plt.grid(linestyle='--', linewidth=0.5)
-plt.title("Return triangle: " + print_period + "\n" + short_name)
+plt.title("Return triangle:"\n" + short_name)
 plt.xlabel("Sell")
 plt.ylabel("Buy")
 ax.ticklabel_format(useOffset=False)

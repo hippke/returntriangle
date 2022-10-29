@@ -12,8 +12,7 @@ from twython import Twython
 from numba import jit
 
 
-def trending_symbol():
-    url = 'https://finance.yahoo.com/trending-tickers'
+def get_symbol(url):
     tag = "data-symbol="
     max_length_symbol = 20
     soup = str(BeautifulSoup(requests.get(url).text, 'lxml'))
@@ -53,7 +52,9 @@ twitter = Twython(APP_KEY, APP_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET)
 #print(twitter.verify_credentials())
 image = "triangle.png"
 #symbol = "^DJI"
-symbol = trending_symbol()
+#url = 'https://finance.yahoo.com/gainers'
+url = 'https://finance.yahoo.com/trending-tickers'
+symbol = get_symbol(url)
 print("symbol:", symbol)
 short_name = yf.Ticker(symbol).info["shortName"]
 print(short_name)

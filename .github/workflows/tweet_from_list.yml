@@ -1,4 +1,4 @@
-name: returntriangle
+name: from_list
 
 on:
   schedule:

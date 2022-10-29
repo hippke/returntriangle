@@ -12,8 +12,6 @@ jobs:
     - uses: actions/checkout@v1
     - name: Set up Python 3.9
       uses: actions/setup-python@v1
-      with:
-        python-version: 3.9
     - name: Install dependencies
       run: |
         pip install numpy matplotlib yfinance requests beautifulsoup4 twython numba pandas

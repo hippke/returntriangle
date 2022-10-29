@@ -87,9 +87,9 @@ fig, ax = plt.subplots()
 
 # Normalized color intensity in [1,99] percentile with 0-midpoint 
 divnorm = mcolors.TwoSlopeNorm(
-	vmin=np.percentile(matrix, 1), 
+	vmin=np.percentile(matrix, 0.5), 
 	vcenter=0, 
-	vmax=np.percentile(matrix, 99)
+	vmax=np.percentile(matrix, 99.5)
 	)
 start_date = np.min(decimal_dates)
 end_date = np.max(decimal_dates)

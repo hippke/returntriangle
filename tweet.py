@@ -23,6 +23,7 @@ def get_symbol(url):
         s = s.partition("\"")[0]
         list_symbols.append(s)
     list_symbols = list(dict.fromkeys(list_symbols))
+    list_symbols = list_symbols[6:]  # remove header, which always promotes the same
     return random.choice(list_symbols) 
 
 

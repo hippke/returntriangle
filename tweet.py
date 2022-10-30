@@ -14,7 +14,7 @@ from numba import jit
 
 def get_symbol(url):
     tag = "data-symbol="
-    max_length_symbol = 20
+    max_length_symbol = 30
     soup = str(BeautifulSoup(requests.get(url).text, 'lxml'))
     y = [m.start() for m in re.finditer(tag, soup)]
     list_symbols = []

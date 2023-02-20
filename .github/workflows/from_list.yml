@@ -1,4 +1,4 @@
-name: from_list
+name: from_list 
 
 on:
   schedule:

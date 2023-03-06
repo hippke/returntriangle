@@ -1,8 +1,8 @@
 name: from_list 
 
-on:
-  schedule:
-    - cron: '30 * * * *'
+#on:
+#  schedule:
+#    - cron: '30 * * * *'
 
 jobs:
   build:
